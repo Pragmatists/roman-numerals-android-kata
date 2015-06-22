@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}">
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/arabicLabel"
+        android:id="@+id/arabicLabel"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/arabicInput"
+        android:layout_alignStart="@+id/arabicInput" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/arabicInput"
+        android:layout_below="@+id/arabicLabel"
+        android:layout_centerHorizontal="true"
+        android:inputType="number" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/romanLabel"
+        android:id="@+id/romanLabel"
+        android:layout_below="@+id/arabicInput"
+        android:layout_alignLeft="@+id/arabicInput"
+        android:layout_alignStart="@+id/arabicInput" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/romanResult"
+        android:layout_below="@+id/romanLabel"
+        android:layout_alignLeft="@+id/romanLabel"
+        android:layout_alignStart="@+id/romanLabel"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        />
+
+</RelativeLayout>
