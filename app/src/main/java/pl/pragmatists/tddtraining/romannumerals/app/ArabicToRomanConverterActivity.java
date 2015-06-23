@@ -10,11 +10,17 @@ import pl.pragmatists.tddtraining.romannumerals.skdfree.RomanNumeralsConverter;
 
 public class ArabicToRomanConverterActivity extends Activity {
 
+    private EditText romanInputField;
+
+    private TextView arabicResultTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_arabic_to_roman_converter);
-        getRomanInputField().addTextChangedListener(new TextWatcher() {
+        romanInputField = getRomanInputField();
+        arabicResultTextView = getArabicResultTextView();
+        romanInputField.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -23,9 +29,9 @@ public class ArabicToRomanConverterActivity extends Activity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 String result = new RomanNumeralsConverter().arabicToRoman(
-                        getRomanInputField().getText().toString()
+                        romanInputField.getText().toString()
                 );
-                getArabicResultTextView().setText(result);
+                arabicResultTextView.setText(result);
             }
 
             @Override
