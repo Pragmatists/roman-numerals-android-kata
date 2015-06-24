@@ -1,8 +1,8 @@
 package pl.pragmatists.tddtraining.romannumerals.skdfree;
 
 public class RomanNumeralsConverter {
-    public String arabicToRoman(String romanNumber) {
-        return times("I", Integer.valueOf(romanNumber));
+    public String arabicToRoman(String arabicNumber) {
+        return times("I", Integer.valueOf(arabicNumber));
     }
 
     private String times(String textToRepeat, int howManyTimes) {
